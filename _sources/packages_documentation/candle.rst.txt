@@ -1,0 +1,18 @@
+candle package
+==============
+
+Все манипуляции по хранению и предобработке свечей
+
+
+candle_json module
+------------------
+.. automodule:: app.candle.candle_json
+    :members:
+    :undoc-members:
+
+candle_classes module
+---------------------
+.. automodule:: app.candle.candles_classes
+    :members:
+    :undoc-members:
+

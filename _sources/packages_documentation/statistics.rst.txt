@@ -1,0 +1,12 @@
+statistics package
+==================
+
+На данный момент состоит из одного модуля
+
+statistics module
+-----------------
+
+.. automodule:: app.statistics.statistics
+    :members:
+    :undoc-members:
+    :private-members:

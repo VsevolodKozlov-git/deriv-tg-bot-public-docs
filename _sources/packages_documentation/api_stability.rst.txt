@@ -1,0 +1,16 @@
+api_stability package
+=====================
+
+Модули, отвечающие за стабильность работы api.
+
+internet module
+---------------
+.. automodule:: app.api_stability.internet
+    :members:
+    :private-members:
+
+
+subscription module
+-------------------
+.. automodule:: app.api_stability.subscription
+    :members:

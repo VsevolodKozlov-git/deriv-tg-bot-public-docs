@@ -1,0 +1,19 @@
+subscription package
+====================
+
+
+subscription_classes module
+---------------------------
+
+.. automodule:: app.subscription.subsription_classes
+    :members:
+    :undoc-members:
+    :private-members:
+
+
+
+.. automodule:: app.subscription.api_classes
+    :members:
+    :undoc-members:
+    :private-members:
+

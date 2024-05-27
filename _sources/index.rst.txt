@@ -1,0 +1,32 @@
+Документация к проекту deriv-telegram-bot
+=========================================
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Quickstart
+
+    how_to/main.rst
+    how_to/architecture.rst
+    how_to/installation.rst
+
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Документация всех пакетов и модулей:
+
+    packages_documentation/high_level_modules
+    packages_documentation/api_stability
+    packages_documentation/candle
+    packages_documentation/conditions
+    packages_documentation/sender
+    packages_documentation/statistics
+    packages_documentation/subscription
+    packages_documentation/utils
+
+
+
+Быстрая навигация
+=================
+* :ref:`Алфавитный указатель<genindex>`

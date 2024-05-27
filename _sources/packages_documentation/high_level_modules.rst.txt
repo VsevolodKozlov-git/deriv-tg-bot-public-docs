@@ -1,0 +1,18 @@
+Модули верхнего уровня
+======================
+
+
+main module
+-----------
+
+.. automodule:: app.main
+    :members:
+
+
+config module
+-------------
+
+.. automodule:: app.config
+    :members:
+    :undoc-members:
+    :no-value:

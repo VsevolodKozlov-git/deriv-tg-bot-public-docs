@@ -1,0 +1,38 @@
+sender package
+==============
+
+Пакет отвечает за:
+
+* Получение уведомлений типа :py:class:`app.sender.notification.CpNotification` от :py:mod:`app.conditions.conditions`.
+* Форматирование уведомлений в удобочитаемую строку
+* Асинхронную отправку сообщений
+* Соединение с api telegram
+
+
+notification module
+-------------------
+.. automodule:: app.sender.notification
+    :members:
+    :undoc-members:
+    :private-members:
+
+notification_sender module
+--------------------------
+.. automodule:: app.sender.notification_sender
+    :members:
+    :undoc-members:
+    :private-members:
+
+msg_sender module
+-----------------
+.. automodule:: app.sender.msg_sender
+    :members:
+    :undoc-members:
+    :private-members:
+
+telegram_api module
+-------------------
+.. automodule:: app.sender.telegram_api
+    :members:
+    :undoc-members:
+    :private-members:

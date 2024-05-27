@@ -1,0 +1,832 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/><title>Index - deriv-telegram-bot documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">deriv-telegram-bot  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">deriv-telegram-bot  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Quickstart</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="how_to/main.html">Цель проекта deriv-telegram-bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to/architecture.html">Архитектура приложения</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to/installation.html">Установка</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Документация всех пакетов и модулей:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/high_level_modules.html">Модули верхнего уровня</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/api_stability.html">api_stability package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/candle.html">candle package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/conditions.html">conditions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/sender.html">sender package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/statistics.html">statistics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/subscription.html">subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_documentation/utils.html">utils package</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#W"><strong>W</strong></a> | <a href="#Y"><strong>Y</strong></a></div>
+</section>
+<section id="_" class="genindex-section">
+  <h2>_</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.__call__">__call__() (app.conditions.conditions.ConditionABC method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsManager.__dispose">__dispose() (app.subscription.subsription_classes.SubscriptionsManager method)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.notification_sender.CpNotificationSender.__format_cp_notifications">__format_cp_notifications() (app.sender.notification_sender.CpNotificationSender method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.__format_stat">__format_stat() (app.statistics.statistics.Statistics method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.__get_msc_now">__get_msc_now() (app.statistics.statistics.Statistics method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.__get_sec_until_tomorrow">__get_sec_until_tomorrow() (app.statistics.statistics.Statistics method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsManager.__get_subscription_coroutine">__get_subscription_coroutine() (app.subscription.subsription_classes.SubscriptionsManager method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.__reset_stats">__reset_stats() (app.statistics.statistics.Statistics method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.__send_stat">__send_stat() (app.statistics.statistics.Statistics method)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.MsgSender.__sender">__sender (app.sender.msg_sender.MsgSender attribute)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.__set_start_dt_msc_to_now">__set_start_dt_msc_to_now() (app.statistics.statistics.Statistics method)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.internet.InternetReconnecter._checker_delay_iter">_checker_delay_iter() (app.api_stability.internet.InternetReconnecter static method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckersManager.add__data_checker">add__data_checker() (app.api_stability.subscription.SubscriptionCheckersManager method)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory.add_new">add_new() (app.candle.candles_classes.CandlesHistory method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.add_one_to_stat">add_one_to_stat() (app.statistics.statistics.Statistics method)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.add_to_stat_if_needed">add_to_stat_if_needed() (app.conditions.conditions.ConditionABC method)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.exceptions.ApiConnectionError">ApiConnectionError</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.exceptions.ApiDataNotArriveError">ApiDataNotArriveError</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.api_classes.ApiManager">ApiManager (class in app.subscription.api_classes)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.ApiWrapper">ApiWrapper (class in app.subscription.subsription_classes)</a>
+</li>
+        <li>
+    app.api_stability.internet
+
+        <ul>
+          <li><a href="packages_documentation/api_stability.html#module-app.api_stability.internet">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.api_stability.subscription
+
+        <ul>
+          <li><a href="packages_documentation/api_stability.html#module-app.api_stability.subscription">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.candle.candle_json
+
+        <ul>
+          <li><a href="packages_documentation/candle.html#module-app.candle.candle_json">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.candle.candles_classes
+
+        <ul>
+          <li><a href="packages_documentation/candle.html#module-app.candle.candles_classes">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.conditions.conditions
+
+        <ul>
+          <li><a href="packages_documentation/conditions.html#module-app.conditions.conditions">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.conditions.metrics
+
+        <ul>
+          <li><a href="packages_documentation/conditions.html#module-app.conditions.metrics">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.config
+
+        <ul>
+          <li><a href="packages_documentation/high_level_modules.html#module-app.config">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    app.sender.msg_sender
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#module-app.sender.msg_sender">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.sender.notification
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#module-app.sender.notification">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.sender.notification_sender
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#module-app.sender.notification_sender">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.sender.telegram_api
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#module-app.sender.telegram_api">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.statistics.statistics
+
+        <ul>
+          <li><a href="packages_documentation/statistics.html#module-app.statistics.statistics">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.subscription.api_classes
+
+        <ul>
+          <li><a href="packages_documentation/subscription.html#module-app.subscription.api_classes">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.subscription.subsription_classes
+
+        <ul>
+          <li><a href="packages_documentation/subscription.html#module-app.subscription.subsription_classes">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.utils.async_queue
+
+        <ul>
+          <li><a href="packages_documentation/utils.html#module-app.utils.async_queue">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.utils.converters
+
+        <ul>
+          <li><a href="packages_documentation/utils.html#module-app.utils.converters">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.utils.exceptions
+
+        <ul>
+          <li><a href="packages_documentation/utils.html#module-app.utils.exceptions">module</a>
+</li>
+        </ul></li>
+        <li>
+    app.utils.logs
+
+        <ul>
+          <li><a href="packages_documentation/utils.html#module-app.utils.logs">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.Candle">Candle (class in app.candle.candles_classes)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.candles_in_history">candles_in_history (app.conditions.conditions.ConditionABC property)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.converters.candles_to_close">candles_to_close() (in module app.utils.converters)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.candles_to_init">candles_to_init (app.conditions.conditions.ConditionABC property)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory">CandlesHistory (class in app.candle.candles_classes)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.exceptions.CandlesHistoryInitError">CandlesHistoryInitError</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.notification_sender.CpNotificationSender.change_msg_sender">change_msg_sender() (app.sender.notification_sender.CpNotificationSender method)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckersManager.checker_coroutine">checker_coroutine() (app.api_stability.subscription.SubscriptionCheckersManager method)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.Candle.close">close (app.candle.candles_classes.Candle attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/sender.html#app.sender.notification.CpNotification.condition">condition (app.sender.notification.CpNotification attribute)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC">ConditionABC (class in app.conditions.conditions)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionBB">ConditionBB (class in app.conditions.conditions)</a>
+</li>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config">Config (class in app.config)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.notification.CpNotification">CpNotification (class in app.sender.notification)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.notification_sender.CpNotificationSender">CpNotificationSender (class in app.sender.notification_sender)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.create_msg_sender">create_msg_sender() (in module app.sender.msg_sender)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.notification.CpNotification.currency_pair">currency_pair (app.sender.notification.CpNotification attribute)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.converters.currency_pair_to_market">currency_pair_to_market() (in module app.utils.converters)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.converters.currency_pair_to_symbol">currency_pair_to_symbol() (in module app.utils.converters)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/subscription.html#app.subscription.api_classes.ApiManager.data_checker_coroutine">data_checker_coroutine() (app.subscription.api_classes.ApiManager method)</a>
+</li>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.datachecker_sleep">datachecker_sleep (app.config.Config attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/utils.html#app.utils.logs.debug">debug() (in module app.utils.logs)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckersManager.delete_data_checkers">delete_data_checkers() (app.api_stability.subscription.SubscriptionCheckersManager method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsManager.dispose_all_subscriptions">dispose_all_subscriptions() (app.subscription.subsription_classes.SubscriptionsManager method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/utils.html#app.utils.converters.epoch_to_datetime">epoch_to_datetime() (in module app.utils.converters)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory.get_all_candles">get_all_candles() (app.candle.candles_classes.CandlesHistory method)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.async_queue.get_all_from_queue">get_all_from_queue() (in module app.utils.async_queue)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.metrics.get_bollinger_low_high">get_bollinger_low_high() (in module app.conditions.metrics)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candle_json.get_candle_from_candle_dict">get_candle_from_candle_dict() (in module app.candle.candle_json)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candle_json.get_candle_from_sub">get_candle_from_sub() (in module app.candle.candle_json)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candle_json.get_candles_from_history">get_candles_from_history() (in module app.candle.candle_json)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory.get_last_n">get_last_n() (app.candle.candles_classes.CandlesHistory method)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.logs.get_log_filepath">get_log_filepath() (in module app.utils.logs)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsManager.get_subscription_tasks">get_subscription_tasks() (app.subscription.subsription_classes.SubscriptionsManager method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.api_classes.ApiManager.get_subscriptions_tasks">get_subscriptions_tasks() (app.subscription.api_classes.ApiManager method)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.telegram_api.get_tg_sender">get_tg_sender() (in module app.sender.telegram_api)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.notification.CpNotification.granularity">granularity (app.sender.notification.CpNotification attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory.has_history">has_history() (app.candle.candles_classes.CandlesHistory method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.internet.InternetReconnecter.have_internet">have_internet() (app.api_stability.internet.InternetReconnecter static method)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.Candle.high">high (app.candle.candles_classes.Candle attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/utils.html#app.utils.logs.info">info() (in module app.utils.logs)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory.init_history">init_history() (app.candle.candles_classes.CandlesHistory method)</a>
+</li>
+        <li><a href="packages_documentation/utils.html#app.utils.logs.init_logs">init_logs() (in module app.utils.logs)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.internet.InternetReconnecter">InternetReconnecter (class in app.api_stability.internet)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.CandlesHistory.is_eq_candles_list">is_eq_candles_list() (app.candle.candles_classes.CandlesHistory method)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckersManager.is_everything_updates">is_everything_updates() (app.api_stability.subscription.SubscriptionCheckersManager method)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candle_json.is_history_response">is_history_response() (in module app.candle.candle_json)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionObserver.is_market_closed_error">is_market_closed_error() (app.subscription.subsription_classes.SubscriptionObserver static method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionObserver.is_new_candles">is_new_candles() (app.subscription.subsription_classes.SubscriptionObserver static method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.logs_dir">logs_dir (app.config.Config attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.Candle.low">low (app.candle.candles_classes.Candle attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.market_closed_sleep">market_closed_sleep (app.config.Config attribute)</a>
+</li>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.max_data_gap">max_data_gap (app.config.Config attribute)</a>
+</li>
+        <li>
+    module
+
+        <ul>
+          <li><a href="packages_documentation/api_stability.html#module-app.api_stability.internet">app.api_stability.internet</a>
+</li>
+          <li><a href="packages_documentation/api_stability.html#module-app.api_stability.subscription">app.api_stability.subscription</a>
+</li>
+          <li><a href="packages_documentation/candle.html#module-app.candle.candle_json">app.candle.candle_json</a>
+</li>
+          <li><a href="packages_documentation/candle.html#module-app.candle.candles_classes">app.candle.candles_classes</a>
+</li>
+          <li><a href="packages_documentation/conditions.html#module-app.conditions.conditions">app.conditions.conditions</a>
+</li>
+          <li><a href="packages_documentation/conditions.html#module-app.conditions.metrics">app.conditions.metrics</a>
+</li>
+          <li><a href="packages_documentation/high_level_modules.html#module-app.config">app.config</a>
+</li>
+          <li><a href="packages_documentation/sender.html#module-app.sender.msg_sender">app.sender.msg_sender</a>
+</li>
+          <li><a href="packages_documentation/sender.html#module-app.sender.notification">app.sender.notification</a>
+</li>
+          <li><a href="packages_documentation/sender.html#module-app.sender.notification_sender">app.sender.notification_sender</a>
+</li>
+          <li><a href="packages_documentation/sender.html#module-app.sender.telegram_api">app.sender.telegram_api</a>
+</li>
+          <li><a href="packages_documentation/statistics.html#module-app.statistics.statistics">app.statistics.statistics</a>
+</li>
+          <li><a href="packages_documentation/subscription.html#module-app.subscription.api_classes">app.subscription.api_classes</a>
+</li>
+          <li><a href="packages_documentation/subscription.html#module-app.subscription.subsription_classes">app.subscription.subsription_classes</a>
+</li>
+          <li><a href="packages_documentation/utils.html#module-app.utils.async_queue">app.utils.async_queue</a>
+</li>
+          <li><a href="packages_documentation/utils.html#module-app.utils.converters">app.utils.converters</a>
+</li>
+          <li><a href="packages_documentation/utils.html#module-app.utils.exceptions">app.utils.exceptions</a>
+</li>
+          <li><a href="packages_documentation/utils.html#module-app.utils.logs">app.utils.logs</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.MsgSender">MsgSender (class in app.sender.msg_sender)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.notification_queue_sleep">notification_queue_sleep (app.config.Config attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/sender.html#app.sender.notification_sender.CpNotificationSender.notification_sender_task">notification_sender_task() (app.sender.notification_sender.CpNotificationSender method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionObserver.on_error">on_error() (app.subscription.subsription_classes.SubscriptionObserver method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionObserver.on_next">on_next() (app.subscription.subsription_classes.SubscriptionObserver method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.Candle.open">open (app.candle.candles_classes.Candle attribute)</a>
+</li>
+        <li><a href="packages_documentation/candle.html#app.candle.candles_classes.Candle.open_time">open_time (app.candle.candles_classes.Candle attribute)</a>
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#app.sender.notification.CpNotification.open_time">(app.sender.notification.CpNotification attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.ApiWrapper.ping">ping() (app.subscription.subsription_classes.ApiWrapper method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.internet.InternetReconnecter.reconnect_if_needed">reconnect_if_needed() (app.api_stability.internet.InternetReconnecter method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.ApiWrapper.reload_api">reload_api() (app.subscription.subsription_classes.ApiWrapper method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.MsgSender.reload_or_init_sender">reload_or_init_sender() (app.sender.msg_sender.MsgSender method)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.api_classes.ApiManager.restart">restart() (app.subscription.api_classes.ApiManager method)</a>
+</li>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.root_dir">root_dir (app.config.Config attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckerOnePair.seconds_passed">seconds_passed() (app.api_stability.subscription.SubscriptionCheckerOnePair method)</a>
+</li>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.MsgSender.send">send() (app.sender.msg_sender.MsgSender method)</a>
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#app.sender.notification_sender.CpNotificationSender.send">(app.sender.notification_sender.CpNotificationSender method)</a>
+</li>
+        </ul></li>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.MsgSender.send_all_from_queue">send_all_from_queue() (app.sender.msg_sender.MsgSender method)</a>
+
+        <ul>
+          <li><a href="packages_documentation/sender.html#app.sender.notification_sender.CpNotificationSender.send_all_from_queue">(app.sender.notification_sender.CpNotificationSender method)</a>
+</li>
+        </ul></li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.send_if_needed">send_if_needed() (app.conditions.conditions.ConditionABC method)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.send_notification">send_notification() (app.conditions.conditions.ConditionABC method)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics.send_stat_at_midnight">send_stat_at_midnight() (app.statistics.statistics.Statistics method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/sender.html#app.sender.msg_sender.MsgSender.sender_task">sender_task() (app.sender.msg_sender.MsgSender method)</a>
+</li>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.server_is_unreachable_sleep">server_is_unreachable_sleep (app.config.Config attribute)</a>
+</li>
+        <li><a href="packages_documentation/statistics.html#app.statistics.statistics.Statistics">Statistics (class in app.statistics.statistics)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.ApiWrapper.subscribe">subscribe() (app.subscription.subsription_classes.ApiWrapper method)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckerOnePair">SubscriptionCheckerOnePair (class in app.api_stability.subscription)</a>
+</li>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckersManager">SubscriptionCheckersManager (class in app.api_stability.subscription)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionObserver">SubscriptionObserver (class in app.subscription.subsription_classes)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsGenerator">SubscriptionsGenerator (class in app.subscription.subsription_classes)</a>
+</li>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsManager">SubscriptionsManager (class in app.subscription.subsription_classes)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.telegram_group">telegram_group (app.config.Config attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.telegram_token">telegram_token (app.config.Config attribute)</a>
+</li>
+        <li><a href="packages_documentation/high_level_modules.html#app.config.Config.tg_sender_sleep">tg_sender_sleep (app.config.Config attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="U" class="genindex-section">
+  <h2>U</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckersManager.update_all_data_checkers">update_all_data_checkers() (app.api_stability.subscription.SubscriptionCheckersManager method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/api_stability.html#app.api_stability.subscription.SubscriptionCheckerOnePair.update_last_date">update_last_date() (app.api_stability.subscription.SubscriptionCheckerOnePair method)</a>
+</li>
+        <li><a href="packages_documentation/conditions.html#app.conditions.conditions.ConditionABC.update_self_parameters">update_self_parameters() (app.conditions.conditions.ConditionABC method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="W" class="genindex-section">
+  <h2>W</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/utils.html#app.utils.logs.warning">warning() (in module app.utils.logs)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="Y" class="genindex-section">
+  <h2>Y</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="packages_documentation/subscription.html#app.subscription.subsription_classes.SubscriptionsGenerator.yield_observable_observer">yield_observable_observer() (app.subscription.subsription_classes.SubscriptionsGenerator method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Vsevolod Kozlov
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    </body>
+</html>

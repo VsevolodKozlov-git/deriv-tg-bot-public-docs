@@ -1,0 +1,20 @@
+conditions package
+==================
+
+
+
+conditions module
+-----------------
+.. automodule:: app.conditions.conditions
+
+.. autoclass:: app.conditions.conditions.ConditionABC
+    :members:
+    :special-members: __call__
+
+.. autoclass:: app.conditions.conditions.ConditionBB
+
+
+metrics module
+--------------
+.. automodule:: app.conditions.metrics
+    :members:
